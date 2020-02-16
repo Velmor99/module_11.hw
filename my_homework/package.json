@@ -9,7 +9,7 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
-  "homepage": "https://github.com/Velmor99/module_11.hw.git",
+  "homepage": "https://velmor99.github.io/module_11.hw/",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Velmor99/module_11.hw"
