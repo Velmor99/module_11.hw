@@ -1,0 +1,73 @@
+@import '../helpers/variables.scss';
+@mixin font-settings ($size, $family, $weight) {
+    font-size: $size;
+    font-family: $family;
+    font-weight: $weight;
+}
+@mixin flex-content ($flex, $content-pos) {
+    display: $flex;
+    justify-content: $content-pos;
+}
+.features {
+    padding-top: 115px;
+
+    &__section-tittle {
+        @include font-settings(24px, $kaushan, 400);
+        display: block;
+        margin-bottom: 24px;
+        padding-top: 47px;
+        text-align: center;
+        font-style: normal;
+    }
+
+    &__section-tittle-two {
+        @include font-settings(30px, $montserrat, bold);
+        text-transform: uppercase;
+        display: block;
+        text-align: center;
+    }
+
+    &__section-tittle-two::after {
+        content: "";
+        display: block;
+        background-color: $coral;
+        width: 60px;
+        height: 3px;
+        margin: 0 auto;
+        margin-top: 42px;
+        margin-bottom: 66px;
+    }
+
+    &__section--information-box {
+        @include flex-content(flex, row);
+        flex-wrap: wrap;
+    }
+
+    &__article--inform_block {
+        width: 400px;
+        padding-left: 82px;
+        position: relative;
+        margin-bottom: 98px;
+    }
+
+    &__article-icon {
+        position: absolute;
+        top: 0;
+        left: 25px;
+    }
+
+    &__article--information-title {
+        @include font-settings(14px, $montserrat, 700);
+        text-transform: uppercase;
+        color: $name-color;
+        margin-top: 0;
+    }
+
+    &__article-text {
+        @include font-settings(14px, $roboto, 400);
+        color: $features-text;
+        margin-bottom: 0px;
+        margin-top: 0;
+        line-height: 24px;
+    }
+}

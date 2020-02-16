@@ -1,0 +1,57 @@
+@import '../helpers/variables.scss';
+@mixin font-settings ($size, $family, $weight) {
+    font-size: $size;
+    font-family: $family;
+    font-weight: $weight;
+}
+@mixin flex-content ($flex, $content-pos) {
+    display: $flex;
+    justify-content: $content-pos;
+}
+.footer {
+    @include flex-content(flex, space-between);
+    box-shadow: 0 -1px 0px 0px $footer-shadow;
+    margin: 0;
+    padding-bottom: 70px;
+
+    &__form {
+        @include flex-content(flex, row);
+        padding-top: 15px;
+    }
+
+    &__span--red-text {
+        color: $span-footer-text;
+    }
+
+    &__btn {
+        @include font-settings(14px, $montserrat, 400);
+        width: 140px;
+        height: 40px;
+        text-transform: uppercase;
+        border: none;
+        color: $white;
+        background-color: $shadow-card;
+    }
+
+    &__text {
+        padding-top: 24px;
+        margin: 0;
+        box-shadow: none;
+    }
+
+    &__input-email {
+        height: 40px;
+        width: 230px;
+        border: 1px solid #e7e7e7;
+    }
+}
+
+
+
+
+
+
+
+
+
+
